@@ -6,7 +6,7 @@ class ProjectSingleView extends Component {
     render() {
         return (
             <div>
-                <CommentList />>
+                <CommentList />
             </div>
         );
     }

@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import IndexView from "./components/viewcomponents/IndexView";
 import ProjectSingleView from "./components/viewcomponents/ProjectSingleView";
 import InnerNav from "./components/InnerNav";
-import Footer from "./components/Footer";
 import styled, { injectGlobal } from "styled-components";
 import "./App.css";
 
