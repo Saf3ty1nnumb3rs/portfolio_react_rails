@@ -1,25 +1,27 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "../App.css";
+import white from "../images/white.jpg";
 
 class Footer extends Component {
   render() {
     return (
-      <div class="footer">
-        <div class="foot-container">
-          <div class="foot-logo">
+      //Styles in App.css
+      <div className="footer">
+        <div className="foot-container">
+          <div className="foot-logo">
             <span>DEVELOPED</span>
             <div>
-              <img class="circle" src="" alt="filler" />
+              <img className="circle" src={white} alt="filler" />
             </div>
             <span>2017</span>
           </div>
         </div>
-        <div class="about bottom-footer">
-          <div id="foot-col-1" class="links-text">
+        <div className="about bottom-footer">
+          <div id="foot-col-1" className="links-text">
             <h5>Contact</h5>
             <div>
               <ul>
-                <li>623 Gaskill St., Unit A</li>
                 <li>Cabbagetown</li>
                 <li>Atlanta, GA 30316</li>
                 <li>
@@ -28,25 +30,49 @@ class Footer extends Component {
               </ul>
             </div>
           </div>
-          <div id="foot-col-2" class="links-text">
+          <div id="foot-col-3" className="links-text flexy">
             <h5>Substance</h5>
             <div>
               <ul>
-                <li>About</li>
-                <li>Work</li>
-                <li>Services</li>
-                <li>Home</li>
-              </ul>
-            </div>
-          </div>
-          <div id="foot-col-3" class="links-text">
-            <h5>Social</h5>
-            <div>
-              <ul>
-                <li>Twitter</li>
-                <li>GitHub</li>
-                <li>LinkedIn</li>
-                <li>Instagram</li>
+                <li>
+                  <Link to="#">Work</Link>
+                </li>
+                <li>
+                  <Link
+                    to="https://twitter.com/baconsamples"
+                    title="Twitter"
+                    target="_blank"
+                  >
+                    Twitter
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="https://www.instagram.com/saf3ty1nnumb3rs/"
+                    title="Instagram"
+                    target="_blank"
+                  >
+                    Instagram
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="https://www.linkedin.com/in/joshsample/"
+                    title="LinkedIn"
+                    target="_blank"
+                  >
+                    LinkedIn
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="https://github.com/Saf3ty1nnumb3rs"
+                    title="GitHub"
+                    target="_blank"
+                  >
+                    Github
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>
