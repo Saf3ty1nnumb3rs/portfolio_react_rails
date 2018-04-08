@@ -1,19 +1,32 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import IndexView from './components/viewcomponents/IndexView'
+import ProjectView from './components/viewcomponents/ProjectView'
+import Footer from './components/Footer';
 import './App.css';
 
 class App extends Component {
   render() {
+
+
+
+    const IndexWrapper = props => {
+      return <IndexView />
+    }
+
+    const ProjectWrapper = props => {
+      return <ProjectView />
+    }
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <Router className="App">
+        <div className="App">
+          <Switch>
+            <Route exact path="/" render={IndexWrapper} />
+            <Route exact path="/projects/:id" render={ProjectWrapper} />
+          </Switch>
+        <Footer />
+        </div>
+      </Router>
     );
   }
 }
