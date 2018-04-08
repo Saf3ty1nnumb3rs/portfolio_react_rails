@@ -19,7 +19,7 @@ class ProjectList extends Component {
                 {this.props.projects.map((project, i) => {
                     return(
                         <Project key={project.id}
-                        index={i} projects={this.props.projects} />
+                        index={i} projects={this.props.projects} id={project.name} />
                     )
                 })}
                 

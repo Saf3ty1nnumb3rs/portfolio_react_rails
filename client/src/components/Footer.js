@@ -7,7 +7,7 @@ class Footer extends Component {
   render() {
     return (
       //Styles in App.css
-      <div className="footer">
+      <div id="contact" className="footer">
         <div className="foot-container">
           <div className="foot-logo">
             <span>DEVELOPED</span>

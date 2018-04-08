@@ -59,7 +59,7 @@ class App extends Component {
   render() {
 
     const IndexWrapper = props => {
-      return <IndexView showOverlay={this.state.showOverlay}/>;
+      return <IndexView toggleOverlay={this.showOverlay} showOverlay={this.state.showOverlay}/>;
     };
 
     const ProjectWrapper = props => {

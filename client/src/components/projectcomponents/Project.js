@@ -1,10 +1,13 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import ProjectCard from "./ProjectCard";
-
+import '../../App.css'
 const ProjectWrap = styled.div`
   display: block;
-  margin: 30px auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 50vw;
+  
   button {
       border: none;
       
@@ -14,7 +17,7 @@ const ProjectWrap = styled.div`
   }
   img {
     max-width: 50vw;
-    min-width: 200px;
+    min-width: 180px;
     height: auto;
     box-shadow: 2px 4px 12px black;
   }
@@ -30,7 +33,7 @@ class Project extends Component {
       }
   render() {
     return (
-      <div>
+      <div className="projects">
         {this.state.showCard ? (
         <ProjectWrap>
               <ProjectCard />

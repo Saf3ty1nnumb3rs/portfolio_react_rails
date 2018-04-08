@@ -1,23 +1,52 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
-import '../../App.css'
+import React, { Component } from "react";
+import styled from "styled-components";
+import About from './About'
+import "../../App.css";
 
+const OverWrap = styled.div`
+  button {
+    border: none;
+    background: transparent;
+    color: #ffffff;
+    cursor: pointer;
+  }
+`;
 class OverlayNav extends Component {
-    render() {
-        return (
-            <div className="menu-overlay">
-            <nav>
-                <ul>
-                <li><Link to="#">About</Link></li>
-                <li><Link to="#">Work</Link></li>
-                <li><Link to="#">Services</Link></li>
-                <li><Link to="#">Contact</Link></li>
-                <li><Link to="#" target="_blank">Home</Link></li>
-                </ul>
-            </nav>
-        </div>
-        );
-    }
+  state = {
+    showAbout: false
+  };
+
+  toggleShowAbout = () => {
+    this.setState({ showAbout: !this.state.showAbout });
+  };
+  render() {
+    return (
+      <OverWrap className="menu-overlay">
+        {this.state.showAbout ? (
+          <About />
+        ) : (
+          <nav>
+            <ul>
+              <li>
+                <button onClick={this.toggleShowAbout}>About</button>
+              </li>
+              <li>
+                <button onClick={this.props.toggleOverlay}>Work</button>
+              </li>
+              <li>
+                <button onClick={this.props.toggleOverlay}>Contact</button>
+              </li>
+              <li>
+                <button onClick={this.props.toggleOverlay}>
+                  Home
+                </button>
+              </li>
+            </ul>
+          </nav>
+        )}
+      </OverWrap>
+    );
+  }
 }
 
 export default OverlayNav;
