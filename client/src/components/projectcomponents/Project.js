@@ -5,6 +5,13 @@ import ProjectCard from "./ProjectCard";
 const ProjectWrap = styled.div`
   display: block;
   margin: 30px auto;
+  button {
+      border: none;
+      
+  }
+  button:hover {
+    cursor: pointer;
+  }
   img {
     max-width: 50vw;
     min-width: 320px;
@@ -14,17 +21,23 @@ const ProjectWrap = styled.div`
 `;
 
 class Project extends Component {
-  state = {
-    showCard: false
-  };
+    state = {
+        showCard: false
+      };
+
+      toggleShowCard = () => {
+          this.setState( { showCard: !this.state.showCard} )
+      }
   render() {
     return (
       <div>
         {this.state.showCard ? (
-          <ProjectCard />
+        <ProjectWrap>
+              <ProjectCard />
+        </ProjectWrap>
         ) : (
           <ProjectWrap>
-            <img src={this.props.projects[this.props.index].image} alt={this.props.projects[this.props.index].name} />
+             <button onClick={this.toggleShowCard}><img src={this.props.projects[this.props.index].image} alt={this.props.projects[this.props.index].name} /></button>
           </ProjectWrap>
         )}
       </div>
