@@ -4,7 +4,7 @@ import styled from "styled-components";
 import axios from "axios";
 import katsuya from "../../images/katsuya1.jpg";
 import TopSection from "../TopSection";
-import OverlayNav from "../OverlayNav";
+import OverlayNav from "./OverlayNav";
 
 
 const IndexWrap = styled.div`
