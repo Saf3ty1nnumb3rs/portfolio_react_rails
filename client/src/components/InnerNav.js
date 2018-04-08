@@ -11,7 +11,7 @@ class InnerNav extends Component {
           <div className="logo-box-container">
             <div className="logo-case">
               <Link to="/">
-                <h2 className="nav-logo">Joshua W. Sample</h2>
+                <p className="nav-logo">Joshua W. Sample</p>
               </Link>
             </div>
             <div className="right-menu">

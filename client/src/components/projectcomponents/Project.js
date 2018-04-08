@@ -14,7 +14,7 @@ const ProjectWrap = styled.div`
   }
   img {
     max-width: 50vw;
-    min-width: 320px;
+    min-width: 200px;
     height: auto;
     box-shadow: 2px 4px 12px black;
   }
