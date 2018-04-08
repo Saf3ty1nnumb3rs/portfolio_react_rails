@@ -40,9 +40,21 @@ const AppWrap = styled.div`
 `;
 
 class App extends Component {
+ state ={
+  showOverlay: false
+ }
+
+
+ showOverlay = () => {
+  this.setState({
+    showOverlay: !this.state.showOverlay
+  });
+};
+
   render() {
+
     const IndexWrapper = props => {
-      return <IndexView />;
+      return <IndexView showOverlay={this.state.showOverlay}/>;
     };
 
     const ProjectWrapper = props => {
@@ -51,7 +63,7 @@ class App extends Component {
     return (
       <Router className="App">
         <AppWrap className="App">
-          <InnerNav className="nav" />
+          <InnerNav className="nav" toggleOverlay={this.showOverlay}/>
           <Switch>
             <Route exact path="/" render={IndexWrapper} />
             <Route exact path="/projects/:id" render={ProjectWrapper} />

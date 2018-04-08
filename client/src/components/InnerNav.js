@@ -21,7 +21,7 @@ class InnerNav extends Component {
                 </Link>
               </span>
               {/* The following hamburger button is the work of Jon Suh and used with permission. The MIT License (MIT) Copyright (c) 2016 Jonathan Suh <hello@jonsuh.com> (jonsuh.com)  */}
-              <button className="hamburger hamburger--arrowalt-r" type="button">
+              <button className="hamburger hamburger--arrowalt-r" type="button" onClick={this.props.toggleOverlay}>
                 {/* give button is-active className on click in JS  --> */}
                 {/* Also, contact-build must switch to hidden/ opacity 0 --> */}
                 <span className="hamburger-box">

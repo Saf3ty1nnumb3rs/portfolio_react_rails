@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import '../overlay.css'
 
-class OverLayNav extends Component {
+class OverlayNav extends Component {
     render() {
         return (
             <div class="menu-overlay">
@@ -20,4 +20,4 @@ class OverLayNav extends Component {
     }
 }
 
-export default OverLayNav;
+export default OverlayNav;
