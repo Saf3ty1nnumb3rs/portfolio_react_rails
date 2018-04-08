@@ -5,7 +5,7 @@ import '../overlay.css'
 class OverlayNav extends Component {
     render() {
         return (
-            <div class="menu-overlay">
+            <div className="menu-overlay">
             <nav>
                 <ul>
                 <li><Link to="#">About</Link></li>

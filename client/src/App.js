@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import IndexView from "./components/viewcomponents/IndexView";
-import ProjectView from "./components/viewcomponents/ProjectView";
+import ProjectSingleView from "./components/viewcomponents/ProjectSingleView";
 import InnerNav from "./components/InnerNav";
 import Footer from "./components/Footer";
 import styled, { injectGlobal } from "styled-components";
@@ -33,7 +33,6 @@ const AppWrap = styled.div`
     z-index: 1000;
   }
   .footer {
-    position: absolute;
     left: 0;
     bottom: 0;
   }
@@ -43,6 +42,13 @@ class App extends Component {
  state ={
   showOverlay: false
  }
+
+
+
+
+
+
+
 
 
  showOverlay = () => {
@@ -58,7 +64,7 @@ class App extends Component {
     };
 
     const ProjectWrapper = props => {
-      return <ProjectView />;
+      return <ProjectSingleView />;
     };
     return (
       <Router className="App">
@@ -68,7 +74,6 @@ class App extends Component {
             <Route exact path="/" render={IndexWrapper} />
             <Route exact path="/projects/:id" render={ProjectWrapper} />
           </Switch>
-          <Footer className="footer" />
         </AppWrap>
       </Router>
     );

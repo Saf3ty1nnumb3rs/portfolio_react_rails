@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import CommentList from '../commentcomponents/CommentList'
 
 
-class ProjectView extends Component {
+class ProjectSingleView extends Component {
     render() {
         return (
             <div>
@@ -12,4 +12,4 @@ class ProjectView extends Component {
     }
 }
 
-export default ProjectView;
+export default ProjectSingleView;

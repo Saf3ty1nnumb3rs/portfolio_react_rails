@@ -6,6 +6,7 @@ import katsuya from "../../images/katsuya1.jpg";
 import TopSection from "../TopSection";
 import OverlayNav from "../OverlayNav";
 
+
 const IndexWrap = styled.div`
   img.back {
     position: relative;
@@ -17,28 +18,29 @@ const IndexWrap = styled.div`
 `;
 
 class IndexView extends Component {
-  state = {
-    projects: [],
-    error: ""
-  };
-
-  componentDidMount() {
-    this.getAllProjects();
-  }
-
-  getAllProjects = async () => {
-    try {
-      const response = await axios.get("api/projects");
-      console.log(response.data);
-      this.setState({
-        projects: response.data.projects
-      });
-    } catch (err) {
-      console.log(err);
-      this.setState({ error: err.message });
-    }
-  };
   
+    state = {
+        projects: [],
+        error: ""
+      };
+    
+      componentDidMount() {
+        this.getAllProjects();
+      }
+    
+      getAllProjects = async () => {
+        try {
+          const response = await axios.get("api/projects");
+          console.log(response.data);
+          this.setState({
+            projects: response.data.projects
+          });
+        } catch (err) {
+          console.log(err);
+          this.setState({ error: err.message });
+        }
+      };
+    
 
   render() {
     return (
@@ -49,8 +51,10 @@ class IndexView extends Component {
           <IndexWrap>
             <img className="back" src={katsuya} alt="katsuya" />
             <TopSection />
-            <ProjectList />
+            <ProjectList projects={this.state.projects} />
+           
           </IndexWrap>
+          
         )}
       </div>
     );
