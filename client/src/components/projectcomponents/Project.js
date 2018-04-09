@@ -7,9 +7,13 @@ const ProjectWrap = styled.div`
   margin-top: 30px;
   margin-bottom: 30px;
   width: 50vw;
+  height: 40vh;
   
-  button {
+  button.pic-button {
       border: none;
+      max-width: 50vw;
+      min-width: 180px;
+      height: 194px;
       
   }
   button:hover {
@@ -36,11 +40,11 @@ class Project extends Component {
       <div className="projects">
         {this.state.showCard ? (
         <ProjectWrap>
-              <ProjectCard />
+              <ProjectCard toggleShowCard={this.toggleShowCard} project={this.props.projects[this.props.index]} projects={this.props.projects}/>
         </ProjectWrap>
         ) : (
           <ProjectWrap>
-             <button onClick={this.toggleShowCard}><img src={this.props.projects[this.props.index].image} alt={this.props.projects[this.props.index].name} /></button>
+             <button className="pic-button" onClick={this.toggleShowCard}><img src={this.props.projects[this.props.index].image} alt={this.props.projects[this.props.index].name} /></button>
           </ProjectWrap>
         )}
       </div>
