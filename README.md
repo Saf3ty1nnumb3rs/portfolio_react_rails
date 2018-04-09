@@ -1,5 +1,7 @@
 # README
 ![Image of iCon](./client/src/images/icon.jpg)
+![Image of WISHkey](./client/src/images/wishkey.jpg)
+![Image of vagabond](./client/src/images/vagabond.jpg)
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
