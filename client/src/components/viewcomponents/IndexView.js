@@ -46,7 +46,7 @@ class IndexView extends Component {
     return (
       <div>
         {this.props.showOverlay ? (
-          <OverlayNav toggleOverlay={this.props.toggleOverlay}/>
+          <OverlayNav {...this.props} toggleOverlay={this.props.toggleOverlay}/>
         ) : (
           <IndexWrap>
             <img className="back" src={katsuya} alt="katsuya" />

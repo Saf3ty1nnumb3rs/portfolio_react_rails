@@ -7,13 +7,13 @@ const ProjectWrap = styled.div`
   margin-top: 30px;
   margin-bottom: 30px;
   width: 50vw;
-  height: 40vh;
+  height: 27.77vw;
+  font-family: 'Philosopher', sans-serif;
   
   button.pic-button {
       border: none;
       max-width: 50vw;
-      min-width: 180px;
-      height: 194px;
+      height: 27.77vw;
       
   }
   button:hover {
@@ -22,7 +22,7 @@ const ProjectWrap = styled.div`
   img {
     max-width: 50vw;
     min-width: 180px;
-    height: auto;
+    height: 27.77vw;
     box-shadow: 2px 4px 12px black;
   }
 `;

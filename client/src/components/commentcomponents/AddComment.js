@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
+import styled from 'styled-components'
 
+
+const FormWrapper = styled.div`
+ width: 80vw;
+
+`
 class AddComment extends Component {
     render() {
         return (
-            <div>
-                
-            </div>
+            <FormWrapper>
+                stuff
+            </FormWrapper>
         );
     }
 }

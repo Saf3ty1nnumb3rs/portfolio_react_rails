@@ -15,7 +15,10 @@ class OverlayNav extends Component {
   state = {
     showAbout: false
   };
-
+  handleHome = () => {
+      this.props.history.push('/')
+      this.props.toggleOverlay()
+  }
   toggleShowAbout = () => {
     this.setState({ showAbout: !this.state.showAbout });
   };
@@ -37,7 +40,7 @@ class OverlayNav extends Component {
                 <button onClick={this.props.toggleOverlay}>Contact</button>
               </li>
               <li>
-                <button onClick={this.props.toggleOverlay}>
+                <button onClick={this.handleHome}>
                   Home
                 </button>
               </li>

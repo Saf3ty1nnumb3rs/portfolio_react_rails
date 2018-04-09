@@ -7,7 +7,7 @@ import styled, { injectGlobal } from "styled-components";
 import "./App.css";
 
 injectGlobal`
-/* @import url('https://fonts.googleapis.com/css?family=Permanent+Marker'); */
+@import url('https://fonts.googleapis.com/css?family=Philosopher|Spectral+SC:400,500');
 *:before, *:after {
 
 box-sizing: border-box;
@@ -59,16 +59,16 @@ class App extends Component {
   render() {
 
     const IndexWrapper = props => {
-      return <IndexView toggleOverlay={this.showOverlay} showOverlay={this.state.showOverlay}/>;
+      return <IndexView {...props} toggleOverlay={this.showOverlay} showOverlay={this.state.showOverlay}/>;
     };
 
     const ProjectWrapper = props => {
-      return <ProjectSingleView />;
+      return <ProjectSingleView {...props} toggleOverlay={this.showOverlay} showOverlay={this.state.showOverlay} />;
     };
     return (
       <Router className="App">
         <AppWrap className="App">
-          <InnerNav className="nav" toggleOverlay={this.showOverlay}/>
+          <InnerNav className="nav" {...this.props} toggleOverlay={this.showOverlay}/>
           <Switch>
             <Route exact path="/" render={IndexWrapper} />
             <Route exact path="/projects/:id" render={ProjectWrapper} />
