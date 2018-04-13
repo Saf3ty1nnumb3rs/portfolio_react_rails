@@ -5,11 +5,7 @@ import Footer from '../Footer'
 import "../../App.css";
 
 const ListWrap = styled.div`
-.footer {
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
+
   
 
 `
