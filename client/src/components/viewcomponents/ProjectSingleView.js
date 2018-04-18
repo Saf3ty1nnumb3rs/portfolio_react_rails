@@ -31,7 +31,7 @@ class ProjectSingleView extends Component {
   getSingleProject = async projectId => {
     try {
       const res = await axios.get(`/api/projects/${projectId}`);
-      this.setState({
+      await this.setState({
         project: res.data.project,
         comments: res.data.comments
       });

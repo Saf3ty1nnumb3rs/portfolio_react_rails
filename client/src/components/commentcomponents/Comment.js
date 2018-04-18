@@ -2,24 +2,30 @@ import React, { Component } from 'react';
 import styled from 'styled-components'
 
 const CommWrapper = styled.div`
-display: flex;
- width: 80vw;
- margin:0 auto;
+display: block;
+ width: 75vw;
+ margin: 15px auto; 
+ 
  .name {
-     width: 20vw;
+     width: 60vw;
+     text-align: start;
      align-self: center;
+     overflow-wrap: break-word;
+     margin: 3px auto 3px ;
      
  }
  #name {
      color: black;
  }
  .content{
+    margin: 3px auto;
      text-align: center;
      width: 60vw;
      min-width: 50vw;
      border: 1px solid black;
      overflow-y: auto;
      padding: 15px;
+     border-radius: 5px;
  }
  #content {
      color: black;
@@ -43,11 +49,12 @@ class Comment extends Component {
         return (
             <CommWrapper>
                 <div className="name" id="name">
-                    <h2>{comment[index].name}</h2> 
+                    <h3>{comment[index].name}</h3> 
                 </div>
                 <div className="content" id="content">
                     <p>{comment[index].comment}</p> 
                 </div> 
+                <button onClick={this.props.toggleShowDelete}></button>
             </CommWrapper>
         );
     }

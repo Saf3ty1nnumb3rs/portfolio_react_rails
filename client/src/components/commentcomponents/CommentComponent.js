@@ -23,6 +23,7 @@ class CommentComponent extends Component {
         }`
       );
       await this.props.getSingleProject(this.props.projectId);
+      this.toggleShowDelete()
     } catch (err) {
       console.log(err.message);
     }
@@ -57,7 +58,6 @@ class CommentComponent extends Component {
           <Comment
             toggleShowDelete={this.toggleShowDelete}
             toggleShowComment={this.toggleShowComment}
-            removeComment={this.props.removeComment}
             projectId={this.props.projectId}
             index={this.props.index}
             comments={this.props.comments}
