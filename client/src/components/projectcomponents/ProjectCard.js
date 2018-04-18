@@ -47,7 +47,7 @@ const ItemWrap = styled.div`
   padding: 5px 15px;
   p { 
       font-size: 16px;
-      letter-spacing: .3rem;
+      letter-spacing: .1rem;
       }
 `
 class ProjectCard extends Component {
