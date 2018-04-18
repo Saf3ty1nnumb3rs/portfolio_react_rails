@@ -6,6 +6,7 @@ display: block;
  width: 75vw;
  margin: 15px auto; 
  
+ 
  .name {
      width: 60vw;
      text-align: start;
@@ -22,6 +23,7 @@ display: block;
      text-align: center;
      width: 60vw;
      min-width: 50vw;
+     min-height: 8vw;
      border: 1px solid black;
      overflow-y: auto;
      padding: 15px;
@@ -54,7 +56,7 @@ class Comment extends Component {
                 <div className="content" id="content">
                     <p>{comment[index].comment}</p> 
                 </div> 
-                <button onClick={this.props.toggleShowDelete}></button>
+                <button onClick={this.props.toggleShowDelete}>Remove Comment</button>
             </CommWrapper>
         );
     }
