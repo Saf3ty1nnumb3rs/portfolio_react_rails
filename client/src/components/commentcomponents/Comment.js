@@ -10,6 +10,9 @@ display: flex;
      align-self: center;
      
  }
+ #name {
+     color: black;
+ }
  .content{
      text-align: center;
      width: 60vw;
@@ -17,6 +20,9 @@ display: flex;
      border: 1px solid black;
      overflow-y: auto;
      padding: 15px;
+ }
+ #content {
+     color: black;
  }
  @media (max-width: 900px){
      display: block;
@@ -36,10 +42,10 @@ class Comment extends Component {
         const comment = this.props.comments
         return (
             <CommWrapper>
-                <div className="name">
+                <div className="name" id="name">
                     <h2>{comment[index].name}</h2> 
                 </div>
-                <div className="content">
+                <div className="content" id="content">
                     <p>{comment[index].comment}</p> 
                 </div> 
             </CommWrapper>
