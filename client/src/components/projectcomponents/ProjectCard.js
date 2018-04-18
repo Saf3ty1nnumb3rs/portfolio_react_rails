@@ -46,6 +46,7 @@ const ItemWrap = styled.div`
   margin: 23px 10px;
   padding: 5px 15px;
   p { 
+      color: black;
       font-size: 16px;
       letter-spacing: .1rem;
       }
