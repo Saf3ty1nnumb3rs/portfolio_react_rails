@@ -10,7 +10,7 @@ class AddComment extends Component {
     render() {
         return (
             <FormWrapper>
-                stuff
+                Add Comment Build in progress
             </FormWrapper>
         );
     }
