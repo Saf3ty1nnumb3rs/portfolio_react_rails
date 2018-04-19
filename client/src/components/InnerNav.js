@@ -4,6 +4,7 @@ import styled from "styled-components";
 import "../hamburgers.min.css";
 import "../App.css";
 
+
 const Head = styled.header`
   button {
     border: none;
@@ -15,11 +16,12 @@ const Head = styled.header`
 `;
 
 class InnerNav extends Component {
-
-    handleLogo = () => {
-        this.props.goHome()
-    }
-
+  
+  handleLogo = () => {
+    this.props.goHome();
+  };
+  
+  
 
   render() {
     return (
@@ -34,9 +36,7 @@ class InnerNav extends Component {
               </Link>
             </div>
             <div className="right-menu">
-              <span className="contact-build">
-                
-              </span>
+              <span className="contact-build" />
               {/* The following hamburger button is the work of Jon Suh and used with permission. The MIT License (MIT) Copyright (c) 2016 Jonathan Suh <hello@jonsuh.com> (jonsuh.com)  */}
               <button
                 className="hamburger hamburger--arrowalt-r"
