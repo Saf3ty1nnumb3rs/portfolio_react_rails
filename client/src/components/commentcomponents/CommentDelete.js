@@ -26,7 +26,7 @@ class CommentDelete extends Component {
     return (
       <DeleteWrapper>
         <div className="center">
-          <p> Are you sure you want to delete ? </p>
+          <p> Are you sure you want to delete this comment? </p>
           <div className="buttons">
             <button onClick={this.props.toggleShowDelete}>Back</button>
             <button onClick={this.props.removeComment}>Delete</button>
