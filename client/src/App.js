@@ -16,7 +16,7 @@ box-sizing: border-box;
 html, body {
   height: 100%;
   margin: 0;
-  color: #FFFFFF;
+  color: #000000;
   }
 div {
   display: block;
