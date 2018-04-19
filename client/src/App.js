@@ -56,6 +56,10 @@ class App extends Component {
   });
 };
 
+goHome = () => {
+  this.setState( { showOverlay: false} ) 
+}
+
   render() {
 
     const IndexWrapper = props => {
@@ -68,7 +72,7 @@ class App extends Component {
     return (
       <Router className="App">
         <AppWrap className="App">
-          <InnerNav className="nav" {...this.props} toggleOverlay={this.showOverlay}/>
+          <InnerNav className="nav" {...this.props} toggleOverlay={this.showOverlay} goHome={this.goHome} />
           <Switch>
             <Route exact path="/" render={IndexWrapper} />
             <Route exact path="/projects/:id" render={ProjectWrapper} />

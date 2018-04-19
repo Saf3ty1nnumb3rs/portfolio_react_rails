@@ -17,7 +17,7 @@ const Head = styled.header`
 class InnerNav extends Component {
 
     handleLogo = () => {
-        this.props.toggleOverlay()
+        this.props.goHome()
     }
 
 
@@ -35,9 +35,7 @@ class InnerNav extends Component {
             </div>
             <div className="right-menu">
               <span className="contact-build">
-                <Link to="#footer-col-1">
-                  <h2>Contact</h2>
-                </Link>
+                
               </span>
               {/* The following hamburger button is the work of Jon Suh and used with permission. The MIT License (MIT) Copyright (c) 2016 Jonathan Suh <hello@jonsuh.com> (jonsuh.com)  */}
               <button
