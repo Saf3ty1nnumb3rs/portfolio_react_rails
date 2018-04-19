@@ -30,6 +30,7 @@ const InfoWrap = styled.div`
   border: 1px solid rgba(0, 0, 0, 0.75);
   box-shadow: 2px 3px 12px black;
   overflow: auto;
+  color: black;
   p {
     margin: 1vw 2vw;
   }

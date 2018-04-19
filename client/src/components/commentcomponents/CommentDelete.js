@@ -8,6 +8,7 @@ const DeleteWrapper = styled.div`
   display: block;
   border: 1px solid black;
   border-radius: 4px;
+  color: black;
  p {
      font-size: 2vw;
  }
