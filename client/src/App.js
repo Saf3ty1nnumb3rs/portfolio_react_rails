@@ -21,6 +21,14 @@ html, body {
 div {
   display: block;
 }
+button:active {
+outline: none;
+border: none;
+}
+
+button:focus {
+  outline: none;
+}
 `;
 
 const AppWrap = styled.div`
