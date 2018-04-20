@@ -11,13 +11,17 @@ const AboutWrap = styled.div`
   }
   p {
     position: relative;
+    overflow-wrap: normal;
+    white-space: normal;
+    text-shadow: 1px 1px #000000;
     color: white;
     z-index: 100;
     margin:2vw auto;
     top: 20vh;
     left: 0;
     right: 0;
-    font-size: 2.3vw;
+    font-size: 18px;
+    font-size-adjust: none;
     width: 80vw;
     text-shadow: 1px black;
   }
@@ -35,13 +39,14 @@ class About extends Component {
           The greatest reward comes from combining beautiful and elegant design
           and a powerful and seamless backend to create something highly
           functional and enjoyable to use. The possibilities are endless; the
-          learning and creating will never stop. Let's go.
+          learning and creating will never stop. Let's go!
         </p>
         <p>
           When I'm not showing people pictures of my daughter Auguste, I'm
           hanging out with her and her beautiful mother.
         </p>
-        <p> I like squirrels.</p>
+        <p>I collect and enjoy Scotch.</p>
+        <p>And I like squirrels.</p>
         <p> A lot.</p>
         <img src={profile} alt="Me" />
       </AboutWrap>
