@@ -6,6 +6,7 @@ import "../../App.css";
 
 const ListWrap = styled.div`
 
+
   
 
 `
