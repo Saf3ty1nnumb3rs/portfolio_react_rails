@@ -10,6 +10,7 @@ const OverWrap = styled.div`
     border: none;
     background: transparent;
     color: #ffffff;
+    text-shadow: 1px 1px 2px black;
     cursor: pointer;
   }
 `;

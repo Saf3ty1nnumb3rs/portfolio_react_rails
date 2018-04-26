@@ -17,7 +17,7 @@ class ProjectList extends Component {
     
     render() {
         return (
-            <ListWrap>
+            <ListWrap id="work">
                 {this.props.projects.map((project, i) => {
                     return(
                         <Project key={project.id}

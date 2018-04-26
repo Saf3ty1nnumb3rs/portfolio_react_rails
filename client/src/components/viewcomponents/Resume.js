@@ -18,10 +18,12 @@ const ResWrap = styled.div`
     width: 100vw;
     height: 100%;
     overflow-y: auto;
+    
     img {
         width: 60vw;
         height: auto;
         margin: 200px auto;
+        box-shadow: 3px 3px 6px black;
         
     }
 `

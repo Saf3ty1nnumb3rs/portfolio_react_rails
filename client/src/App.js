@@ -63,12 +63,13 @@ hideNav = () => {
   } ) 
 }
 
- showOverlay = () => {
+ showOverlay = (url) => {
+   
   this.setState({
     showOverlay: !this.state.showOverlay,
     showNav: true
   });
-};
+ }
 
 goHome = () => {
   this.setState( { 

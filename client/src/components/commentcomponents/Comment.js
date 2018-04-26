@@ -16,7 +16,7 @@ const CommWrapper = styled.div`
     
   }
     button {
-        background-color: red;
+        background-color: palevioletred;
         box-shadow: 1px 2px 2px black;
         border-radius: 4px;
     }

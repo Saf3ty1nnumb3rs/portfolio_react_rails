@@ -35,7 +35,7 @@ class Footer extends Component {
             <div>
               <ul>
                 <li>
-                  <Link to="#">Work</Link>
+                  <a href='#work'>Work</a>
                 </li>
                 <li>
                   <Link

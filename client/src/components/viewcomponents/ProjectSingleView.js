@@ -48,6 +48,7 @@ class ProjectSingleView extends Component {
           <OverlayNav {...this.props} toggleOverlay={this.props.toggleOverlay}/>
         ) : (
         <CommentList
+          {...this.props}
           project={this.state.project}
           comments={this.state.comments}
           getSingleProject={this.getSingleProject}
