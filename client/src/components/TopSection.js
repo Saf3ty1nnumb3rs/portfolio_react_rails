@@ -1,10 +1,15 @@
 import React, { Component } from "react";
-import '../App.css'
+import styled from "styled-components";
+import "../App.css";
+
+const Tops = styled.div`
+  
+`;
 
 class TopSection extends Component {
   render() {
     return (
-      <div className="top-section">
+      <Tops className="top-section">
         <div className="full-stack">
           <div id="start-change" className="full">
             Full
@@ -15,7 +20,7 @@ class TopSection extends Component {
           <div className="olutions">olutions</div>
           <div className="solutions">Solutions</div>
         </div>
-      </div>
+      </Tops>
     );
   }
 }

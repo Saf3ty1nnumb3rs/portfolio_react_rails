@@ -2,17 +2,22 @@ import React, { Component } from "react";
 import ProjectList from "../projectcomponents/ProjectList";
 import styled from "styled-components";
 import axios from "axios";
+import fill from "../../images/bulbasaurusRex.jpg";
 import bulb from "../../images/lightbulb.mp4";
 import TopSection from "../TopSection";
 import OverlayNav from "./OverlayNav";
 
 const IndexWrap = styled.div`
-background-color: #d5daf2;
+  background-color: #d5daf2;
   video.back {
+    background-image: url(${fill});
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    background-position-x: 4vw; 
     position: relative;
-    left: -5vw;
+    left: -4vw;
     height: auto;
-    width: 105vw;
+    width: 104vw;
     z-index: 0;
     box-shadow: 2px 4px 12px black;
   }
