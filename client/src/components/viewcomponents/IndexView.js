@@ -2,18 +2,18 @@ import React, { Component } from "react";
 import ProjectList from "../projectcomponents/ProjectList";
 import styled from "styled-components";
 import axios from "axios";
-import katsuya from "../../images/katsuya1.jpg";
 import bulb from "../../images/lightbulb.mp4";
 import TopSection from "../TopSection";
 import OverlayNav from "./OverlayNav";
 
 const IndexWrap = styled.div`
+background-color: #d5daf2;
   video.back {
     position: relative;
     left: -5vw;
     height: auto;
     width: 105vw;
-    z-index: -1000;
+    z-index: 0;
     box-shadow: 2px 4px 12px black;
   }
 `;
@@ -48,6 +48,8 @@ class IndexView extends Component {
           <OverlayNav
             {...this.props}
             toggleOverlay={this.props.toggleOverlay}
+            hideNav={this.props.hideNav}
+            showNav={this.props.showNav}
           />
         ) : (
           <IndexWrap>

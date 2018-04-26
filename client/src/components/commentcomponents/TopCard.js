@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 
 const TopCardWrapper = styled.div`
   width: 80vw;
@@ -9,6 +8,7 @@ const TopCardWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   font-size: 1.75vw;
+  background-color: #d5daf2; ;
 `;
 
 const ImageWrap = styled.img`
@@ -30,6 +30,7 @@ const InfoWrap = styled.div`
   border: 1px solid rgba(0, 0, 0, 0.75);
   box-shadow: 2px 3px 12px black;
   overflow: auto;
+  background-color: white;
   color: black;
   p {
     margin: 1vw 2vw;

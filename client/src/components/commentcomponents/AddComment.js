@@ -19,8 +19,9 @@ const FormWrapper = styled.div`
       border: none;
       background-color: #59CD90;
       border-radius: 5px;
+      box-shadow: 1px 2px 2px;
     }
-    .name {
+    #name {
       width: 60vw;
       padding: 15px;
       min-width: 50vw;
@@ -28,11 +29,11 @@ const FormWrapper = styled.div`
       min-height: 2.5vw;
       border: 1px solid black;
       border-radius: 5px;
-    }
-    #name {
       color: black;
+      background-color: white;
     }
-    .content {
+   
+    #content {
       text-align: start;
       align-self: center;
       width: 60vw;
@@ -42,20 +43,19 @@ const FormWrapper = styled.div`
       overflow-y: auto;
       padding: 15px;
       min-height: 2vw;
+      color: black;
+      background-color: white;
     }
     .buttons {
         width: 80vw;
         
-    }
-    #content {
-      color: black;
     }
 
     @media (max-width: 900px) {
       display: block;
       margin: 15px auto;
       width: 50vw;
-      .content, .name, .buttons {
+      #content, #name, .buttons {
         width: 50vw;
         margin-bottom: 28px;
       }
@@ -115,7 +115,7 @@ class AddComment extends Component {
         <p>Please feel free to leave constructive criticism or to ask any questions. Solid feedback is appreciated and encouraged.</p>
         <form className="form" onSubmit={this.addComment}>
           <input
-            className="name"
+            id="name"
             name="name"
             onChange={this.handleChange}
             type="text"
@@ -123,7 +123,7 @@ class AddComment extends Component {
             value={this.state.newPost.name}
           />
           <textarea
-            className="content"
+            id="content"
             name="comment"
             onChange={this.handleChange}
             type="text"

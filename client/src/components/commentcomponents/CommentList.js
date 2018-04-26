@@ -12,6 +12,7 @@ const ListWrap = styled.div`
     left: 0;
     right: 0;
     z-index: 100;
+    background-color: #d5daf2;
   }
 `;
 class CommentList extends Component {

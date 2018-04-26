@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import About from './About'
+import About from "./About";
+import Resume from "./Resume"
+
 import "../../App.css";
 
 const OverWrap = styled.div`
@@ -13,21 +15,36 @@ const OverWrap = styled.div`
 `;
 class OverlayNav extends Component {
   state = {
-    showAbout: false
+    showAbout: false,
+    showRes: false
+    
   };
   handleHome = () => {
-      this.props.history.push('/')
-      this.props.toggleOverlay()
-  }
-  toggleShowAbout = () => {
-    this.setState({ showAbout: !this.state.showAbout });
+    this.props.history.push("/");
+    this.props.toggleOverlay();
   };
+  toggleShowAbout = () => {
+    this.setState({
+      showAbout: true,
+      showRes: false
+    });
+    this.props.hideNav()
+  };
+  toggleShowRes = () => {
+    this.setState({
+      showAbout: false,
+      showRes: true
+    });
+    this.props.hideNav()
+  };
+  
+  
   render() {
     return (
       <OverWrap className="menu-overlay">
-        {this.state.showAbout ? (
-          <About />
-        ) : (
+        {this.state.showAbout ? <About /> : null}
+        {this.state.showRes ? <Resume /> : null}
+        {this.props.showNav ? (
           <nav>
             <ul>
               <li>
@@ -37,16 +54,15 @@ class OverlayNav extends Component {
                 <button onClick={this.props.toggleOverlay}>Work</button>
               </li>
               <li>
-                <button onClick={this.props.toggleOverlay}>Contact</button>
+                <button onClick={this.toggleShowRes}>Resumé</button>
               </li>
               <li>
-                <button onClick={this.handleHome}>
-                  Home
-                </button>
+                <button onClick={this.handleHome}>Home</button>
               </li>
             </ul>
           </nav>
-        )}
+        ) : null}
+        
       </OverWrap>
     );
   }

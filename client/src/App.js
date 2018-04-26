@@ -17,6 +17,7 @@ html, body {
   height: 100%;
   margin: 0;
   color: #000000;
+  background-color: #d5daf2;
   }
 div {
   display: block;
@@ -47,7 +48,8 @@ const AppWrap = styled.div`
 
 class App extends Component {
  state ={
-  showOverlay: false
+  showOverlay: false,
+  showNav: true
  }
  
 
@@ -55,26 +57,34 @@ class App extends Component {
 
 
 
-
+hideNav = () => {
+  this.setState( { 
+    showNav: !this.state.showNav
+  } ) 
+}
 
  showOverlay = () => {
   this.setState({
-    showOverlay: !this.state.showOverlay
+    showOverlay: !this.state.showOverlay,
+    showNav: true
   });
 };
 
 goHome = () => {
-  this.setState( { showOverlay: false} ) 
+  this.setState( { 
+    showOverlay: false,
+    showNav: true
+  } ) 
 }
 
   render() {
 
     const IndexWrapper = props => {
-      return <IndexView {...props} toggleOverlay={this.showOverlay} showOverlay={this.state.showOverlay}/>;
+      return <IndexView {...props} toggleOverlay={this.showOverlay} showOverlay={this.state.showOverlay} showNav={this.state.showNav} hideNav={this.hideNav}/>;
     };
 
     const ProjectWrapper = props => {
-      return <ProjectSingleView {...props} toggleOverlay={this.showOverlay} showOverlay={this.state.showOverlay} />;
+      return <ProjectSingleView {...props} toggleOverlay={this.showOverlay} showOverlay={this.state.showOverlay} showNav={this.state.showNav} hideNav={this.hideNav}/>;
     };
     return (
       <Router className="App">

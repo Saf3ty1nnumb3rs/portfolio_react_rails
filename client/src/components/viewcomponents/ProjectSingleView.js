@@ -8,6 +8,7 @@ import "../../App.css";
 const ListWrapper = styled.div`
   width: 100vw;
   margin: 0;
+  background-color: #d5daf2;
 `;
 
 class ProjectSingleView extends Component {

@@ -15,6 +15,7 @@ const ProjectWrap = styled.div`
       border: none;
       max-width: 50vw;
       max-height: 27.77vw;
+      background-color: #d5daf2;
       
   }
   button:hover {
@@ -33,6 +34,7 @@ const ProjectWrap = styled.div`
     button.pic-button {
       max-width: 90vw;
       max-height: 49.99vw;
+      
     }
     img {
       max-width: 90vw;
