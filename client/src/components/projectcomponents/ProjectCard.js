@@ -3,8 +3,11 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const CardWrapper = styled.div`
-  max-width: 50vw;
-  max-height: 27.77vw;
+  width: 50vw;
+  height: 27.77vw;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: block;
   color: black;
   border: 1px solid black;
   box-shadow: 2px 4px 12px black;

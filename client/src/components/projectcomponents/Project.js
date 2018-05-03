@@ -7,14 +7,14 @@ const ProjectWrap = styled.div`
   display: block;
   margin-top: 30px;
   margin-bottom: 30px;
-  max-width: 50vw;
-  max-height: 27.77vw;
+  width: 50vw;
+  height: 27.77vw;
   font-family: 'Philosopher', sans-serif;
   
   button.pic-button {
       border: none;
-      max-width: 50vw;
-      max-height: 27.77vw;
+      width: 50vw;
+      height: 27.77vw;
       background-color: #d5daf2;
       
   }
@@ -22,9 +22,9 @@ const ProjectWrap = styled.div`
     cursor: pointer;
   }
   img {
-    max-width: 50vw;
+    width: 50vw;
     min-width: 180px;
-    max-height: 27.77vw;
+    height: 27.77vw;
     box-shadow: 2px 4px 12px black;
   }
   @media (max-width: 645px) {  
