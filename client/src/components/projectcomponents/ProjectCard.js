@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const CardWrapper = styled.div`
-  width: 50vw;
+  max-width: 50vw;
   height: 27.77vw;
   margin-top: 30px;
   margin-bottom: 30px;
@@ -29,7 +29,7 @@ const CardWrapper = styled.div`
   }
   @media (max-width: 645px) {
     max-width: 90vw;
-    max-height: 49.99vw;
+    height: 49.99vw;
   }
 `;
 const ButtonGroupWrap = styled.div`
