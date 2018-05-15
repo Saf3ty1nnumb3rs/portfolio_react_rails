@@ -339,7 +339,7 @@ div.projects:nth-child(4) {
   div.projects.mobile {
     max-width: 90vw;
     max-height: 49.99vw;
-    margin: 20px auto;
+    margin: 95px auto;
   }
 }
 .foot-container {
