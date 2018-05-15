@@ -15,9 +15,8 @@ const IndexWrap = styled.div`
     background-repeat: no-repeat;
     background-position-x: 4vw; 
     position: relative;
-    left: -4vw;
     height: auto;
-    width: 104vw;
+    width: 100vw;
     z-index: 0;
     box-shadow: 2px 4px 12px black;
   }
