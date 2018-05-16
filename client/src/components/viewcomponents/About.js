@@ -12,6 +12,7 @@ const AboutWrap = styled.div`
   }
   #textual {
     height: 100vh;
+    overflow-y: auto;
     p {
       position: relative;
       overflow-wrap: normal;
@@ -25,8 +26,7 @@ const AboutWrap = styled.div`
       right: 0;
       font-size: 18px;
       font-size-adjust: none;
-      width: 80vw;
-      height: auto;
+      width: 90vw;
       text-shadow: 1px black;
     }
   }
